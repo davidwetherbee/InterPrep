@@ -1,4 +1,4 @@
-package com.davezor.android.Views;
+package com.davezor.android.views;
 
 /**
  * Created by Flavadave on 4/12/2015.
@@ -6,4 +6,3 @@ package com.davezor.android.Views;
 public class ListView {
 
 }
-
