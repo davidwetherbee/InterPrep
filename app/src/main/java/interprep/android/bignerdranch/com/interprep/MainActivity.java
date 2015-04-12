@@ -31,12 +31,9 @@ public class MainActivity extends ActionBarActivity {
 
         // Creating array and populating it with created players
         Player[] playerArray =  new Player[]{player1,player2,player3, player4, player5};
-        for (int i = 0; i < playerArray.length; i++ ){
+        //Do you feel lucky, punk?
+        for (int i = 0; i < playerArray.length; i++ ) {
             Log.i(TAG, "Player: " + playerArray[i].getName());
-
-            //Do you feel lucky, punk?
-
-
         }
     }
 
