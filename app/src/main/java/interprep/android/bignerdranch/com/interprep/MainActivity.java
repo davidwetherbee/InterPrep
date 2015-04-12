@@ -11,6 +11,9 @@ import POJOs.Player;
 
 public class MainActivity extends ActionBarActivity {
 
+    private static final String TAG = "Hi!";
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
