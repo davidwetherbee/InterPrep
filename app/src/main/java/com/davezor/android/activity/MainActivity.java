@@ -1,4 +1,4 @@
-package interprep.android.bignerdranch.com.interprep;
+package com.davezor.android.activity;
 
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
@@ -6,21 +6,18 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 
-import POJOs.Player;
+import com.davezor.android.model.Player;
+import interprep.android.bignerdranch.com.interprep.R;
 
 
 public class MainActivity extends ActionBarActivity {
 
-    private static final String TAG = "Hi!";
-
+    private static final String TAG = "MainActivity";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-
-
 
         // Creating 5 players for the array
         Player player1 = new Player("John Elway", 7, "Quarterback", 50, 300, 51475, 16);
@@ -30,13 +27,13 @@ public class MainActivity extends ActionBarActivity {
         Player player5 = new Player("Emmanuel Sanders", 10, "Wide Reciever", 28, 20, 3434, 6);
 
         // Creating array and populating it with created players
-        Player[] playerArray =  new Player[]{player1,player2,player3, player4, player5};
+        Player[] playerArray =  new Player[] {player1, player2, player3, player4, player5};
+
         //Do you feel lucky, punk?
         for (int i = 0; i < playerArray.length; i++ ) {
             Log.i(TAG, "Player: " + playerArray[i].getName());
         }
     }
-
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
