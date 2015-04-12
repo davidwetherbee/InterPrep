@@ -31,6 +31,7 @@ public class MainActivity extends ActionBarActivity {
         for (int i = 0; i < playerArray.length; i++ ){
             Log.i(TAG, "Player: " + playerArray[i].getName());
 
+            //Do you feel lucky, punk?
 
 
         }
