@@ -19,13 +19,18 @@ public class AddActivity extends ActionBarActivity {
         Object name = findViewById(R.id.enter_player_name);
         Object position = findViewById(R.id.enter_player_position);
         Object number = findViewById(R.id.enter_player_number);
+        int number1 = (Integer) number;
         Object age = findViewById(R.id.enter_player_age);
+        int age1 = (Integer) age;
         Object tds = findViewById(R.id.enter_player_tds);
+        int tds1 = (Integer) tds;
         Object yards = findViewById(R.id.enter_player_yards);
+        int yards1 = (Integer) yards;
         Object seasons = findViewById(R.id.enter_player_seasons);
+        int seasons1 = (Integer) seasons;
 
 
-        Player newPlayer = new Player(name.toString(), number, position.toString(), age, tds, yards, seasons, R.drawable.defaultPlayer);
+        Player newPlayer = new Player(name.toString(), number1, position.toString(), age1, tds1, yards1, seasons1, R.drawable.defaultPlayer);
     }
 
 
