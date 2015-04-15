@@ -1,0 +1,72 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:orientation="vertical">
+
+
+<EditText
+    android:id="@+id/enter_player_name"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:hint="@string/player_name"
+    android:inputType="text"/>
+
+    <EditText
+        android:id="@+id/enter_player_position"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:hint="@string/player_position"
+        android:inputType="text"/>
+
+    <EditText
+        android:id="@+id/enter_player_number"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:hint="@string/player_number"
+        android:inputType="text"/>
+
+    <EditText
+        android:id="@+id/enter_player_age"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:hint="@string/player_age"
+        android:inputType="text"/>
+
+    <EditText
+        android:id="@+id/enter_player_tds"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:hint="@string/player_tds"
+        android:inputType="text"/>
+
+    <EditText
+        android:id="@+id/enter_player_yards"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:hint="@string/player_yards"
+        android:inputType="text"/>
+
+    <EditText
+        android:id="@+id/enter_player_seasons"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:hint="@string/player_seasons"
+        android:inputType="text"/>
+
+    <Button
+        android:id="@+id/add_player_final"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="Add Player"
+        android:onClick="addPlayerFinal"
+
+        />
+
+
+
+
+</LinearLayout>

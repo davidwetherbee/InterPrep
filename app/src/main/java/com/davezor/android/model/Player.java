@@ -13,7 +13,7 @@ public class Player {
     private int mSeasonsInLeague;
     private int mImageResource;
 
-    public Player(String name, int number, String position, int age, int tds, int yards, int seasonsInLeague) {
+    public Player(String name, int number, String position, int age, int tds, int yards, int seasonsInLeague, int imageResource) {
         mName = name;
         mNumber = number;
         mPosition = position;
@@ -21,6 +21,7 @@ public class Player {
         mTds = tds;
         mYards = yards;
         mSeasonsInLeague = seasonsInLeague;
+        mImageResource = imageResource;
     }
 
     public String getName() {
