@@ -4,8 +4,10 @@ import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.EditText;
 
 import com.davezor.android.R;
+import com.davezor.android.model.Player;
 
 public class AddActivity extends ActionBarActivity {
 
@@ -13,7 +15,20 @@ public class AddActivity extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add);
+
+        Object name = findViewById(R.id.enter_player_name);
+        Object position = findViewById(R.id.enter_player_position);
+        Object number = findViewById(R.id.enter_player_number);
+        Object age = findViewById(R.id.enter_player_age);
+        Object tds = findViewById(R.id.enter_player_tds);
+        Object yards = findViewById(R.id.enter_player_yards);
+        Object seasons = findViewById(R.id.enter_player_seasons);
+
+
+        Player newPlayer = new Player(name.toString(), number, position.toString(), age, tds, yards, seasons, R.drawable.defaultPlayer);
     }
+
+
 
 
     @Override

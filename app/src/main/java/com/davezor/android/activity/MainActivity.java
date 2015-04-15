@@ -37,7 +37,7 @@ public class MainActivity extends ActionBarActivity {
         // Creating array and populating it with created players
         Player[] playerArray =  new Player[] {player1, player2, player3, player4, player5};
 
-        
+
         for (int i = 0; i < playerArray.length; i++ ) {
             Log.i(TAG, "Player: " + playerArray[i].getName());
         }
@@ -46,17 +46,17 @@ public class MainActivity extends ActionBarActivity {
         list.setData(playerArray);
         playerList.setAdapter(list);
 
+        Button addPlayer = (Button) findViewById(R.id.add_player);
+        addPlayer.setOnClickListener(new View.OnClickListener()) {
+            public void addPlayers(View view) {
 
-    }
-    Button addPlayer = (Button) findViewById(R.id.add_player);
-    addPlayer.setOnClickListener(new View.OnClickListener()) {
-        public void addPlayer(View view) {
+                Intent addActivity = new Intent(this, AddActivity.class);
+                Activity.startActivity(addActivity);
 
-            Intent addActivity = new Intent(this, AddActivity.class);
-            Activity.startActivity(addActivity);
-
+            }
         }
-    };
+    }
+
 
 
     @Override
