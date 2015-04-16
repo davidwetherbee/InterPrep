@@ -64,9 +64,14 @@ public class Adapter extends BaseAdapter {
 
     public void setData(Player[] playerArray) {
         //clears any existing data so it doesn't keep adding whats in the adapter
+
         mPlayerList.clear();
         mPlayerList.addAll(Arrays.asList(playerArray));
         //communicates back to listview, adapter's data has changed, re-render list b/c data has changed
+        notifyDataSetChanged();
+    }
+    public void addData(Player player){
+        mPlayerList.add(player);
         notifyDataSetChanged();
     }
 

@@ -2,36 +2,61 @@ package com.davezor.android.activity;
 
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 
 import com.davezor.android.R;
 import com.davezor.android.model.Player;
 
 public class AddActivity extends ActionBarActivity {
+    private EditText mName;
+    private EditText mPosition;
+    private EditText mNumber;
+    private EditText mAge;
+    private EditText mTds;
+    private EditText mYards;
+    private EditText mSeasons;
+
+    private static final String TAG = "AddActivity";
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add);
 
-        Object name = findViewById(R.id.enter_player_name);
-        Object position = findViewById(R.id.enter_player_position);
-        Object number = findViewById(R.id.enter_player_number);
-        int number1 = (Integer) number;
-        Object age = findViewById(R.id.enter_player_age);
-        int age1 = (Integer) age;
-        Object tds = findViewById(R.id.enter_player_tds);
-        int tds1 = (Integer) tds;
-        Object yards = findViewById(R.id.enter_player_yards);
-        int yards1 = (Integer) yards;
-        Object seasons = findViewById(R.id.enter_player_seasons);
-        int seasons1 = (Integer) seasons;
+        mName = (EditText) findViewById(R.id.enter_player_name);
+        mPosition = (EditText) findViewById(R.id.enter_player_position);
+        mNumber = (EditText) findViewById(R.id.enter_player_number);
+        mAge = (EditText) findViewById(R.id.enter_player_age);
+        mTds = (EditText) findViewById(R.id.enter_player_tds);
+        mYards = (EditText) findViewById(R.id.enter_player_yards);
+        mSeasons = (EditText) findViewById(R.id.enter_player_seasons);
 
 
-        Player newPlayer = new Player(name.toString(), number1, position.toString(), age1, tds1, yards1, seasons1, R.drawable.default_player);
+        Button addPlayer = (Button) findViewById(R.id.add_player_final);
+        addPlayer.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                addPlayer();
+
+            }
+        });
+
+
+
     }
+
+    public void addPlayer(){
+        Player newPlayer = new Player(mName.getText().toString(), Integer.parseInt(mNumber.getText().toString()), mPosition.getText().toString(), Integer.parseInt(mAge.getText().toString()), Integer.parseInt(mTds.getText().toString()), Integer.parseInt(mYards.getText().toString()), Integer.parseInt(mSeasons.getText().toString()), R.drawable.default_player);
+        MainActivity.newPlayer(newPlayer);
+        Log.i(TAG, newPlayer.toString());
+        finish();
+    }
+
 
 
 

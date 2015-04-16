@@ -87,4 +87,10 @@ public class Player {
     public void setImageResource(int imageResource) {
         mImageResource = imageResource;
     }
+
+    @Override
+    public String toString() {
+
+        return "Name: " + mName + " Number: " + mNumber + " Position: " + mPosition + " Age: " + mAge + " TD's: " + mTds + " Yards: " + mYards + " Seasons: " + mSeasonsInLeague;
+    }
 }

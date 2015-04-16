@@ -8,6 +8,7 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ListView;
 
@@ -21,11 +22,25 @@ public class MainActivity extends ActionBarActivity {
 
     private static final String TAG = "MainActivity";
 
+    private static Adapter sList;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         ListView playerList = (ListView) findViewById(R.id.player_list);
+        playerList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+
+            }
+        });
+        playerList.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
+            @Override
+            public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
+                return false;
+            }
+        });
 
         // Creating 5 players for the array
         Player player1 = new Player("John Elway", 7, "Quarterback", 50, 300, 51475, 16, R.drawable.john_el);
@@ -42,9 +57,9 @@ public class MainActivity extends ActionBarActivity {
             Log.i(TAG, "Player: " + playerArray[i].getName());
         }
 
-        Adapter list = new Adapter(this);
-        list.setData(playerArray);
-        playerList.setAdapter(list);
+        sList = new Adapter(this);
+        sList.setData(playerArray);
+        playerList.setAdapter(sList);
 
         Button addPlayer = (Button) findViewById(R.id.add_player);
         addPlayer.setOnClickListener(new View.OnClickListener() {
@@ -53,6 +68,10 @@ public class MainActivity extends ActionBarActivity {
                 startAddActivity();
             }
         });
+    }
+
+    public static void newPlayer(Player newPlayer){
+        sList.addData(newPlayer);
     }
 
     private void startAddActivity() {
