@@ -30,7 +30,7 @@ public class AddActivity extends ActionBarActivity {
         int seasons1 = (Integer) seasons;
 
 
-        Player newPlayer = new Player(name.toString(), number1, position.toString(), age1, tds1, yards1, seasons1, R.drawable.defaultPlayer);
+        Player newPlayer = new Player(name.toString(), number1, position.toString(), age1, tds1, yards1, seasons1, R.drawable.default_player);
     }
 
 
