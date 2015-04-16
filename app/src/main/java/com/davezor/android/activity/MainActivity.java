@@ -47,17 +47,18 @@ public class MainActivity extends ActionBarActivity {
         playerList.setAdapter(list);
 
         Button addPlayer = (Button) findViewById(R.id.add_player);
-        addPlayer.setOnClickListener(new View.OnClickListener()) {
-            public void addPlayers(View view) {
-
-                Intent addActivity = new Intent(this, AddActivity.class);
-                Activity.startActivity(addActivity);
-
+        addPlayer.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startAddActivity();
             }
-        }
+        });
     }
 
-
+    private void startAddActivity() {
+        Intent addActivity = new Intent(this, AddActivity.class);
+        startActivity(addActivity);
+    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

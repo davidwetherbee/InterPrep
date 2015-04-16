@@ -9,7 +9,7 @@
     <string name="player_position">Position</string>
     <string name="player_number">Jersey Number</string>
     <string name="player_age">Age</string>
-    <string name="player_tds">Td's</string>
+    <string name="player_tds">Td\'s</string>
     <string name="player_yards">Yards</string>
     <string name="player_seasons">Seasons in League</string>
 </resources>
